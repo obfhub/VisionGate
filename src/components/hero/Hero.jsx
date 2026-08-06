@@ -17,56 +17,73 @@ export default function Hero() {
   ];
 
   return (
-    <section id="home" className="min-h-screen flex overflow-hidden bg-white relative">
+    <section id="home" className="min-h-screen flex flex-col lg:flex-row overflow-hidden bg-white relative">
+      {/* Hero image - hidden on mobile, optimized on desktop */}
       <img
         src="/images/hero.png"
         alt="Terminal Hikvision de recunoaștere facială scanând fața unei persoane"
-        className="hidden lg:block absolute left-[55%] top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[110%] object-cover z-20 pointer-events-none"
+        loading="lazy"
+        className="hidden lg:block absolute left-[55%] top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[110%] w-auto object-cover z-20 pointer-events-none"
       />
 
-      <div className="w-full lg:w-[45%] flex flex-col justify-between px-6 sm:px-8 lg:px-12 pt-8 pb-12 sm:pb-16 lg:pb-20 bg-white relative z-10">
-        <div className="flex-shrink-0 flex justify-between items-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-blue-600 tracking-tight">
+      {/* Main content area - full width on mobile, 45% on desktop */}
+      <div className="w-full lg:w-[45%] flex flex-col justify-between px-5 sm:px-8 lg:px-12 pt-20 sm:pt-8 pb-12 sm:pb-16 lg:pb-20 bg-white relative z-10 min-h-screen lg:min-h-auto">
+
+        {/* Mobile/tablet header with menu and language */}
+        <div className="lg:hidden flex-shrink-0 flex justify-between items-center gap-4 -mx-5 sm:-mx-8 px-5 sm:px-8 -mt-20 pt-6 pb-4 border-b border-slate-100">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-600 tracking-tight flex-1">
             Vision<span className="text-blue-700">Gate</span>
           </h2>
-          <div className="lg:hidden">
+          <div className="flex items-center gap-3">
             <LanguageSwitcher />
+            <button
+              onClick={() => setOpen((v) => !v)}
+              className="flex items-center justify-center w-12 h-12 rounded-lg text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors duration-150 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+              aria-label="Menu"
+              aria-expanded={open}
+              aria-controls="mobile-nav"
+            >
+              {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col justify-center space-y-6 sm:space-y-8">
+        {/* Main hero content */}
+        <div className="flex-1 flex flex-col justify-center space-y-6 sm:space-y-8 py-8 sm:py-0">
           <div className="space-y-4 sm:space-y-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-600 leading-tight tracking-tight whitespace-pre-line">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-blue-600 leading-tight tracking-tight whitespace-pre-line">
               {t("hero.title")}
             </h1>
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-md font-light">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-lg font-light">
               {t("hero.subtitle")}
             </p>
           </div>
 
-          <div className="pt-4">
+          {/* CTA Button - full width on mobile, inline on desktop */}
+          <div className="pt-4 flex gap-3 flex-col sm:flex-row">
             <a
               href="#solutii"
-              className="btn-primary inline-block px-8 sm:px-10 py-3.5 sm:py-4 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-colors duration-200 text-sm sm:text-base shadow-sm"
+              className="btn-primary inline-flex items-center justify-center px-8 py-4 sm:py-3.5 sm:px-10 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 active:bg-blue-800 transition-colors duration-200 text-base sm:text-sm shadow-sm focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 min-h-12 sm:min-h-11"
             >
               {t("hero.cta")}
             </a>
           </div>
         </div>
 
-        <div className="flex-shrink-0 flex gap-4 pt-8 border-t border-slate-200">
+        {/* Contact methods - full width on mobile, horizontal on desktop */}
+        <div className="flex-shrink-0 flex gap-3 pt-8 border-t border-slate-200 flex-wrap">
           <a
             href="tel:+373600000000"
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-colors duration-200"
-            aria-label="Phone"
+            className="flex items-center justify-center min-h-12 min-w-12 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white active:bg-blue-700 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            aria-label={t("hero.phone")}
             title={t("hero.phone")}
           >
             <Phone className="w-5 h-5" />
           </a>
           <a
             href="mailto:contact@visiongate.md"
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-colors duration-200"
-            aria-label="Email"
+            className="flex items-center justify-center min-h-12 min-w-12 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white active:bg-blue-700 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            aria-label={t("hero.email")}
             title={t("hero.email")}
           >
             <Mail className="w-5 h-5" />
@@ -75,8 +92,8 @@ export default function Hero() {
             href="https://t.me/visiongate"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-colors duration-200"
-            aria-label="Telegram"
+            className="flex items-center justify-center min-h-12 min-w-12 rounded-full bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white active:bg-blue-700 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+            aria-label={t("hero.telegram")}
             title={t("hero.telegram")}
           >
             <Send className="w-5 h-5" />
@@ -84,12 +101,16 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Desktop right side with gradient and navigation */}
       <div className="hidden lg:flex w-[55%] bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 flex-col relative">
         <nav className="pt-8 px-8 flex justify-end items-center gap-6">
           <ul className="flex gap-8 text-white">
             {NAV.map((item, i) => (
               <li key={i}>
-                <a href={item.href} className="nav-underline text-sm font-medium hover:text-blue-200 transition-colors duration-200">
+                <a
+                  href={item.href}
+                  className="nav-underline text-sm font-medium hover:text-blue-200 transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-700 rounded px-1 py-0.5"
+                >
                   {item.label}
                 </a>
               </li>
@@ -101,7 +122,7 @@ export default function Hero() {
                 i18n.changeLanguage('ro');
                 localStorage.setItem('language', 'ro');
               }}
-              className={`px-2.5 py-1 text-sm font-medium rounded transition-colors ${
+              className={`px-3 py-1.5 text-sm font-medium rounded transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-700 ${
                 i18n.language === 'ro'
                   ? 'bg-white/30 text-white'
                   : 'text-blue-100 hover:text-white'
@@ -114,7 +135,7 @@ export default function Hero() {
                 i18n.changeLanguage('ru');
                 localStorage.setItem('language', 'ru');
               }}
-              className={`px-2.5 py-1 text-sm font-medium rounded transition-colors ${
+              className={`px-3 py-1.5 text-sm font-medium rounded transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-blue-700 ${
                 i18n.language === 'ru'
                   ? 'bg-white/30 text-white'
                   : 'text-blue-100 hover:text-white'
@@ -127,28 +148,19 @@ export default function Hero() {
         <div className="flex-1 relative overflow-hidden" />
       </div>
 
-      <div className="lg:hidden flex items-start justify-between absolute top-0 right-0 left-0 p-4 sm:p-6 z-50">
-        <h2 className="text-xl sm:text-2xl font-bold text-blue-600 tracking-tight">
-          Vision<span className="text-blue-700">Gate</span>
-        </h2>
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="w-10 h-10 flex items-center justify-center rounded-lg text-blue-600 hover:bg-blue-50 transition-colors focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-          aria-label="Meniu"
-        >
-          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
-
+      {/* Mobile navigation drawer */}
       {open && (
-        <div className="lg:hidden fixed inset-0 top-16 bg-white border-t border-slate-200 z-40">
-          <nav className="px-4 sm:px-6 py-4 space-y-2">
+        <div
+          id="mobile-nav"
+          className="lg:hidden fixed inset-0 top-[73px] sm:top-[89px] bg-white border-t border-slate-200 z-40 overflow-y-auto"
+        >
+          <nav className="px-4 sm:px-6 py-4 space-y-1">
             {NAV.map((item, i) => (
               <a
                 key={i}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="block px-4 py-3 text-slate-700 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors font-medium"
+                className="block px-4 py-3.5 text-slate-700 hover:bg-blue-50 hover:text-blue-600 active:bg-blue-100 rounded-lg transition-colors font-medium text-base min-h-12 flex items-center focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
               >
                 {item.label}
               </a>
