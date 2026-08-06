@@ -19,24 +19,23 @@ export default function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex flex-col lg:flex-row overflow-hidden bg-white relative">
-      {/* Hero image container - behind text on mobile, right side on desktop */}
-      <div className="absolute inset-0 lg:inset-auto lg:left-[55%] lg:top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 h-full lg:h-[110%] w-full lg:w-auto z-0 lg:z-20 pointer-events-none overflow-hidden">
-        {/* Dark gradient overlay for text readability on mobile */}
-        <div className="absolute inset-0 lg:hidden bg-gradient-to-r from-white via-white/90 to-black/20" />
-
+      {/* Hero image - visible on right edge of mobile, full right side on desktop */}
+      <div className="absolute right-0 inset-y-0 w-2/5 sm:w-1/3 lg:w-[55%] z-0 lg:z-20 pointer-events-none overflow-hidden">
         <img
           src="/images/hero.png"
           alt="Terminal Hikvision de recunoaștere facială scanând fața unei persoane"
           loading="lazy"
-          className="w-full h-full object-cover lg:object-cover"
+          className="w-full h-full object-cover"
         />
+        {/* Gradient fade from right to left on mobile for text readability */}
+        <div className="absolute inset-0 lg:hidden bg-gradient-to-l from-transparent via-white/30 to-white" />
       </div>
 
-      {/* Main content area - full width on mobile, 45% on desktop */}
-      <div className="w-full lg:w-[45%] flex flex-col justify-between px-5 sm:px-8 lg:px-12 pt-20 sm:pt-8 pb-12 sm:pb-16 lg:pb-20 bg-white lg:bg-white relative z-10 min-h-screen lg:min-h-auto">
+      {/* Main content area - transparent on mobile to show image behind, white on desktop */}
+      <div className="w-full lg:w-[45%] flex flex-col justify-between px-5 sm:px-8 lg:px-12 pt-20 sm:pt-8 pb-12 sm:pb-16 lg:pb-20 bg-transparent lg:bg-white relative z-10 min-h-screen lg:min-h-auto">
 
         {/* Mobile/tablet header with menu and language */}
-        <div className="lg:hidden flex-shrink-0 flex justify-between items-center gap-4 -mx-5 sm:-mx-8 px-5 sm:px-8 -mt-20 pt-6 pb-4 border-b border-slate-100">
+        <div className="lg:hidden flex-shrink-0 flex justify-between items-center gap-4 -mx-5 sm:-mx-8 px-5 sm:px-8 -mt-20 pt-6 pb-4 border-b border-slate-100 bg-white/95 backdrop-blur-sm">
           <h2 className="text-2xl sm:text-3xl font-bold text-blue-600 tracking-tight flex-1">
             Vision<span className="text-blue-700">Gate</span>
           </h2>
