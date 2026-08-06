@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex flex-col lg:flex-row overflow-hidden bg-white relative">
       {/* Hero image - visible on right side of mobile, full right side on desktop */}
-      <div className="absolute right-0 sm:right-0 lg:right-auto inset-y-0 w-1/2 sm:w-2/5 lg:w-[55%] z-0 lg:z-20 pointer-events-none overflow-hidden">
+      <div className="absolute right-0 sm:right-0 lg:right-auto inset-y-0 w-full sm:w-3/5 lg:w-[55%] z-0 lg:z-20 pointer-events-none overflow-hidden">
         <img
           src="/images/hero.png"
           alt="Terminal Hikvision de recunoaștere facială scanând fața unei persoane"
