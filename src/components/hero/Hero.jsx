@@ -28,37 +28,6 @@ export default function Hero() {
           className="w-full h-full object-cover"
         />
 
-        {/* Facial recognition scanning beam effect */}
-        <motion.div
-          className="absolute top-1/4 right-12 w-32 h-40 rounded-xl border-2 border-blue-400/60 bg-gradient-to-b from-blue-400/20 to-transparent"
-          animate={{
-            boxShadow: [
-              "0 0 20px rgba(96, 165, 250, 0.3)",
-              "0 0 40px rgba(96, 165, 250, 0.6)",
-              "0 0 20px rgba(96, 165, 250, 0.3)"
-            ],
-            opacity: [0.5, 1, 0.5]
-          }}
-          transition={{
-            duration: 2.5,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-
-        {/* Scanning line animation */}
-        <motion.div
-          className="absolute top-1/4 right-12 w-32 h-1 bg-gradient-to-r from-transparent via-blue-300 to-transparent"
-          animate={{
-            top: ["25%", "65%", "25%"]
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-
         {/* Gradient fade from right to left on mobile for text readability */}
         <div className="absolute inset-0 lg:hidden bg-gradient-to-l from-transparent via-white/30 to-white" />
       </div>
