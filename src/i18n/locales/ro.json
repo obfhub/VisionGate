@@ -1,0 +1,202 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "solutions": "Soluții",
+    "howItWorks": "Cum funcționează",
+    "terminals": "Terminale",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "CONTROL\nACCES\nINTELIGENT",
+    "subtitle": "Instalăm și configurăm terminale de recunoaștere facială, sisteme de pontaj și soluții moderne de control acces.",
+    "cta": "Mai Mult",
+    "phone": "Apelează",
+    "email": "Trimite email",
+    "telegram": "Contactează pe Telegram"
+  },
+  "solutions": {
+    "eyebrow": "Soluții",
+    "title": "Três soluții pentru fiecare nevoie",
+    "subtitle": "Descoperă ce sistem se potrivește perfect pentru organizația ta",
+    "terminal": "Terminal",
+    "timekeeping": "Pontaj",
+    "access": "Control Acces",
+    "forBuildings": "Pentru clădiri",
+    "forTransport": "Pentru transport",
+    "forEvents": "Pentru evenimente",
+    "mainTitle": "Tot ce ține de terminalele Face Recognition",
+    "mainSubtitle": "Lucrăm exclusiv cu terminale Hikvision de recunoaștere facială și cu soluțiile construite în jurul lor.",
+    "facialAccess": "Control acces facial",
+    "facialAccessDesc": "Terminale Hikvision Face Recognition instalate la intrări, usi de birou, depozite și zone restricționate.",
+    "timeSystems": "Sisteme de pontaj",
+    "timeSystemsDesc": "Pontaj automat la intrare și ieșire, cu rapoarte exportabile pentru resurse umane și salarizare.",
+    "userManagement": "Management utilizatori",
+    "userManagementDesc": "Înrolare fete, grupuri de acces, orare, drepturi temporare pentru vizitatori și subcontractori.",
+    "configuration": "Configurare și instalare",
+    "configurationDesc": "Montaj profesional, cablare, alimentare, rețea și configurarea completă a terminalelor.",
+    "maintenance": "Mentenanță și service",
+    "maintenanceDesc": "Verificări periodice, actualizări firmware, intervenții rapide și înlocuiri de componente.",
+    "consulting": "Consultanță",
+    "consultingDesc": "Analizăm fluxul de persoane și recomandăm modelul de terminal și integrarea potrivită."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Configurează soluția ta de control acces",
+    "subtitle": "Spune-ne câți utilizatori ai și ce integrare te interesează. Îți propunem modelul potrivit și un plan de instalare.",
+    "talkAbout": "Vorbim despre proiectul tău",
+    "response": "Răspundem în aceeași zi lucrătoare. Pentru urgențe de acces, sună direct.",
+    "phone": "+373 60 000 000",
+    "email": "contact@visiongate.md",
+    "location": "Chișinău, Moldova",
+    "weReceive": "Ce primim de la tine",
+    "users": "Număr aproximativ de utilizatori",
+    "accessPoints": "Număr de puncte de acces",
+    "equipment": "Tipul de echipament existent (yală, turnichet, barieră)",
+    "timeTracking": "Dacă ai nevoie de pontaj sau doar de acces",
+    "name": "Nume*",
+    "company": "Companie",
+    "employees": "Număr de angajați",
+    "integration": "Integrare dorită",
+    "projectDetails": "Detalii proiect",
+    "selectPlaceholder": "Selectează",
+    "placeHolder": {
+      "name": "Numele tău",
+      "company": "Compania",
+      "phone": "07xx xxx xxx",
+      "email": "email@companie.md",
+      "message": "Spune-ne despre clădire, punctele de acces, orarele dorite..."
+    },
+    "sendRequest": "Trimite cererea",
+    "sending": "Se trimite...",
+    "requestSent": "Cererea a fost trimisă",
+    "thankYou": "Îți mulțumim. Te contactăm în aceeași zi lucrătoare cu o propunere de soluție.",
+    "sendAnother": "Trimite o altă cerere",
+    "error": "A apărut o eroare. Te rugăm să încerci din nou sau să ne suni direct.",
+    "employeeRanges": ["Până la 50", "50–200", "200–500", "Peste 500"],
+    "integrationOptions": ["Yale electromagnetice", "Electromagneți", "Turnicheți", "Bariere", "HikCentral", "Încă nu știu"]
+  },
+  "integrations": {
+    "eyebrow": "Integrări",
+    "title": "Terminalul conectat la tot ce controlează accesul",
+    "subtitle": "Legăm terminalul Hikvision de echipamentele existente și de platforma de management.",
+    "hikcentral": "HikCentral",
+    "hikcentalDesc": "Administrare centralizată a terminalelor, utilizatorilor, orarelor și rapoartelor de acces.",
+    "yaleElectromagnetic": "Yale electromagnetice",
+    "yaleElectromagneticDesc": "Deblocare automată a ușii la recunoașterea feței, cu buton de urgență și senzor de stare.",
+    "electromagnets": "Electromagneți",
+    "electromagnetsDesc": "Conectare pe relee, alimentare de rezervă și temporizări configurabile.",
+    "turnstiles": "Turnicheți",
+    "turnstileDesc": "Integrare cu turnicheți tripod, glass sau full-height, pe intrare și ieșire.",
+    "barriers": "Bariere",
+    "barriersDesc": "Acces la parcare pe baza feții, cu drepturi separate pentru angajați și vizitatori.",
+    "networkTimekeeping": "Rețea și pontaj",
+    "networkTimekeepingDesc": "Sincronizare pe rețea locală, export de rapoarte de pontaj pentru HR."
+  },
+  "terminals": {
+    "eyebrow": "Terminale",
+    "title": "Modele de terminale",
+    "subtitle": "Recomandăm modelul potrivit în funcție de numărul de utilizatori, trafic și tipul de integrare.",
+    "requestQuote": "Cere ofertă pentru acest model",
+    "models": {
+      "ds_k1t341": {
+        "tag": "Entry-level",
+        "desc": "Terminal compact pentru birouri mici și uși individuale cu recunoaștere facială avansată."
+      },
+      "ds_k1t671": {
+        "tag": "Standard",
+        "desc": "Terminal profesional pentru control acces și pontaj cu capacitate medie."
+      },
+      "ds_k1t342": {
+        "tag": "Pontaj",
+        "desc": "Optimizat pentru evidența prezenței în producție și logistică cu suport Wi-Fi."
+      },
+      "ds_k1t672": {
+        "tag": "Enterprise",
+        "desc": "Terminal profesional pentru trafic intens cu recunoaștere facială și IR pentru noapte."
+      }
+    }
+  },
+  "howItWorks": {
+    "eyebrow": "Cum funcționează",
+    "title": "De la prima vizită la sistemul funcțional",
+    "subtitle": "Un proces clar, în cinci pași, fără surprize și fără întreruperea activității.",
+    "step1Title": "1. Evaluare la fața locului",
+    "step1": "Analizăm intrările, fluxul de persoane, ușile, turnicheții existenți și infrastructura de rețea.",
+    "step2Title": "2. Proiectare soluție",
+    "step2": "Alegem modelul de terminal, tipul de yală sau electromagnet, poziționarea și modul de integrare.",
+    "step3Title": "3. Instalare",
+    "step3": "Montaj terminale, cablare, alimentare, conectare la yale electromagnetice, turnicheți sau bariere.",
+    "step4Title": "4. Configurare și integrare",
+    "step4": "Setări terminale, integrare HikCentral, orare de acces, grupuri, reguli de pontaj și rapoarte.",
+    "step5Title": "5. Instruire și suport",
+    "step5": "Instruim echipa, înrolăm utilizatorii și rămânem disponibili pentru mentenanță și service."
+  },
+  "whyUs": {
+    "eyebrow": "De ce să ne alegi",
+    "title": "Un partener care face un singur lucru, foarte bine",
+    "reason1Title": "Specializare unică",
+    "reason1": "Nu facem de toate. Lucrăm doar cu terminale Hikvision Face Recognition și integrările lor.",
+    "reason2Title": "Instalări finalizate corect",
+    "reason2": "Predăm sistemul funcțional, testat pe fiecare punct de acces, cu documentația setărilor.",
+    "reason3Title": "Intervenție rapidă",
+    "reason3": "Suport telefonic în aceeași zi și deplasare programată rapid pentru urgențe de acces.",
+    "reason4Title": "Suport pe termen lung",
+    "reason4": "Mentenanță, actualizări, extinderi și instruire pentru personalul nou.",
+    "stat1Value": "200+",
+    "stat1Label": "Terminale instalate",
+    "stat2Value": "10+",
+    "stat2Label": "Ani de experiență",
+    "stat3Value": "24h",
+    "stat3Label": "Timp de răspuns",
+    "stat4Value": "100%",
+    "stat4Label": "Focus Face Recognition"
+  },
+  "benefits": {
+    "eyebrow": "Beneficii",
+    "title": "De ce recunoașterea facială schimbă accesul",
+    "subtitle": "Un singur sistem rezolvă accesul, prezența și evidența persoanelor din clădire.",
+    "benefit1Title": "Acces în sub o secundă",
+    "benefit1": "Recunoaștere facială instantanee, fără cozi la intrare, chiar și în orele de vârf.",
+    "benefit2Title": "Identificare sigură",
+    "benefit2": "Fața nu se pierde, nu se împrumută și nu se copiază — se elimină accesul cu cardul altcuiva.",
+    "benefit3Title": "Fără costuri cu carduri",
+    "benefit3": "Nu mai cumperi, personalizezi și înlocuiești cartele de proximitate.",
+    "benefit4Title": "Pontaj corect, automat",
+    "benefit4": "Orele lucrate se înregistrează exact, fără intervenție manuală și fără dispute.",
+    "benefit5Title": "Acces fără atingere",
+    "benefit5": "Igienic și comod: fără taste, fără cartele, fără chei fizice.",
+    "benefit6Title": "Sistem scalabil",
+    "benefit6": "Adaugi terminale și puncte de acces treptat, pe aceeași platformă."
+  },
+  "faq": {
+    "eyebrow": "Întrebări frecvente",
+    "title": "Ce ne întreabă cel mai des clienții",
+    "q1": "Cât durează instalarea unui terminal?",
+    "a1": "Pentru un punct de acces standard, montajul și configurarea durează câteva ore. Pentru clădiri cu mai multe intrări, planificăm lucrarea pe etape, fără a opri activitatea.",
+    "q2": "Terminalul funcționează și cu mască sau ochelari?",
+    "a2": "Da. Terminalele Hikvision recunosc fața și cu mască sau ochelari, iar precizia rămâne ridicată. Recomandăm însă înrolarea corectă a fețelor, cu iluminare adecvată.",
+    "q3": "Se poate folosi și pentru pontaj, nu doar pentru acces?",
+    "a3": "Da. Același terminal poate înregistra intrările și ieșirile, iar rapoartele de prezență pot fi exportate pentru resurse umane și salarizare.",
+    "q4": "Pot integra terminalul cu turnicheții sau bariera existentă?",
+    "a4": "În majoritatea cazurilor da. Verificăm tipul de echipament și intrările de comandă, apoi conectăm terminalul prin relee sau prin controller.",
+    "q5": "Ce este HikCentral și am nevoie de el?",
+    "a5": "HikCentral este platforma de management Hikvision, utilă când ai mai multe terminale și vrei administrare centralizată a utilizatorilor, orarelor și rapoartelor. Pentru un singur terminal nu este obligatoriu.",
+    "q6": "Oferiți mentenanță după instalare?",
+    "a6": "Da. Oferim contracte de mentenanță cu verificări periodice, actualizări firmware, curățare senzori și intervenții la solicitare.",
+    "q7": "Cum sunt protejate datele biometrice?",
+    "a7": "Datele se stochează local, pe terminal sau pe serverul clientului, cu acces restricționat. Configurăm sistemul astfel încât să respecte cerințele interne de protecție a datelor."
+  },
+  "finalCta": {
+    "title": "Control acces fără chei, fără carduri, fără griji",
+    "subtitle": "Proiectăm, instalăm și configurăm sistemul de recunoaștere facială potrivit clădirii tale.",
+    "cta": "Cere o consultație"
+  },
+  "footer": {
+    "company": "Companie",
+    "about": "Despre noi",
+    "contact": "Contact",
+    "privacy": "Politică de confidențialitate",
+    "terms": "Termeni și condiții",
+    "rights": "Toate drepturile rezervate"
+  }
+}

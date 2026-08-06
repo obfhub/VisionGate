@@ -1,0 +1,41 @@
+{
+  "exportedAt": "2026-08-06T08:59:58.771Z",
+  "exportDurationMs": 34113,
+  "fileCount": 101,
+  "assetCount": 5,
+  "resolvedAssetCount": 0,
+  "missingAssets": [
+    {
+      "url": "https://media.db.com/images/public/6a744ab3a6094bf67172b9a5/5f6bef9e4_generated_021ceaeb.png",
+      "error": "Failed to fetch"
+    },
+    {
+      "url": "https://media.db.com/images/public/6a744ab3a6094bf67172b9a5/9fdedca15_generated_67ab34e6.png",
+      "error": "Failed to fetch"
+    },
+    {
+      "url": "https://media.db.com/images/public/user_6a744a7343e22217095e8dfb/e9a0743ac_backup.png",
+      "error": "Failed to fetch"
+    },
+    {
+      "url": "https://media.db.com/images/public/6a744ab3a6094bf67172b9a5/fa29fd77c_generated_ef734d6c.png",
+      "error": "Failed to fetch"
+    },
+    {
+      "url": "https://media.db.com/images/public/6a744ab3a6094bf67172b9a5/673c02f60_generated_095382a7.png",
+      "error": "Failed to fetch"
+    }
+  ],
+  "warnings": [
+    "Preview iframe scan failed: Failed to read a named property 'document' from 'Window': Blocked a frame with origin \"https://app.base44.com\" from accessing a cross-origin frame."
+  ],
+  "diagnostics": {
+    "exportState": "BUILDING_FILE_TREE",
+    "assetCount": 5,
+    "pendingFetches": 0,
+    "pendingImages": 0,
+    "domNodeCount": 3235,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+    "exportDurationMs": 34113
+  }
+}
