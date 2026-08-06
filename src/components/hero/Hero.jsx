@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
-import { Menu, X, Mail, Phone, Send } from "lucide-react";
+import { Mail, Phone, Send } from "lucide-react";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
@@ -18,16 +19,16 @@ export default function Hero() {
 
   return (
     <section id="home" className="min-h-screen flex flex-col lg:flex-row overflow-hidden bg-white relative">
-      {/* Hero image - hidden on mobile, optimized on desktop */}
+      {/* Hero image - behind text on mobile (z-0), on right side on desktop (z-20) */}
       <img
         src="/images/hero.png"
         alt="Terminal Hikvision de recunoaștere facială scanând fața unei persoane"
         loading="lazy"
-        className="hidden lg:block absolute left-[55%] top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-[110%] w-auto object-cover z-20 pointer-events-none"
+        className="absolute inset-0 lg:inset-auto lg:left-[55%] lg:top-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 h-full lg:h-[110%] w-full lg:w-auto object-cover lg:object-cover z-0 lg:z-20 pointer-events-none opacity-30 lg:opacity-100"
       />
 
       {/* Main content area - full width on mobile, 45% on desktop */}
-      <div className="w-full lg:w-[45%] flex flex-col justify-between px-5 sm:px-8 lg:px-12 pt-20 sm:pt-8 pb-12 sm:pb-16 lg:pb-20 bg-white relative z-10 min-h-screen lg:min-h-auto">
+      <div className="w-full lg:w-[45%] flex flex-col justify-between px-5 sm:px-8 lg:px-12 pt-20 sm:pt-8 pb-12 sm:pb-16 lg:pb-20 bg-white lg:bg-white relative z-10 min-h-screen lg:min-h-auto">
 
         {/* Mobile/tablet header with menu and language */}
         <div className="lg:hidden flex-shrink-0 flex justify-between items-center gap-4 -mx-5 sm:-mx-8 px-5 sm:px-8 -mt-20 pt-6 pb-4 border-b border-slate-100">
@@ -38,12 +39,46 @@ export default function Hero() {
             <LanguageSwitcher />
             <button
               onClick={() => setOpen((v) => !v)}
-              className="flex items-center justify-center w-12 h-12 rounded-lg text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors duration-150 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+              className="flex items-center justify-center w-12 h-12 rounded-lg text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-colors duration-150 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 relative"
               aria-label="Menu"
               aria-expanded={open}
               aria-controls="mobile-nav"
             >
-              {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {/* Animated burger menu */}
+              <motion.div
+                className="flex flex-col justify-center items-center gap-1.5"
+                animate={open ? "open" : "closed"}
+                variants={{
+                  closed: { rotate: 0 },
+                  open: { rotate: 45 }
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <motion.span
+                  className="block w-6 h-0.5 bg-blue-600 rounded-full origin-center"
+                  variants={{
+                    closed: { rotate: 0, y: 0 },
+                    open: { rotate: 90, y: 10 }
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                />
+                <motion.span
+                  className="block w-6 h-0.5 bg-blue-600 rounded-full"
+                  variants={{
+                    closed: { opacity: 1 },
+                    open: { opacity: 0 }
+                  }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                />
+                <motion.span
+                  className="block w-6 h-0.5 bg-blue-600 rounded-full origin-center"
+                  variants={{
+                    closed: { rotate: 0, y: 0 },
+                    open: { rotate: -90, y: -10 }
+                  }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                />
+              </motion.div>
             </button>
           </div>
         </div>
